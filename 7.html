@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <title>display classes</title>
+</head>
+<body>
+  <main class="container-fluid">
+    <h1 class="text-danger">Display Classes</h1>
+
+    <h4 class="text-secondary">d-block</h4>
+
+    <span class="d-block">Rex</span>
+    <span class="d-block">Dolores</span>
+    <span class="d-block">Bubbles</span>
+    <span class="d-block">Fred</span>
+    <span class="d-block">Rivet</span>
+    <span class="d-block">Eileen</span>
+
+    <hr>
+
+    <h4 class="text-secondary">d-inline</h4>
+
+    <div class="d-inline">Rex</div>
+    <div class="d-inline">Dolores</div>
+    <div class="d-inline">Bubbles</div>
+    <div class="d-inline">Fred</div>
+    <div class="d-inline">Rivet</div>
+    <div class="d-inline">Eileen</div>
+
+    <hr>
+
+    <h4 class="text-secondary">d-inline-block</h4>
+
+    <div class="d-inline-block" style="width:200px">Rex</div>
+    <div class="d-inline-block" style="width:200px">Dolores</div>
+    <div class="d-inline-block" style="width:200px">Bubbles</div>
+    <div class="d-inline-block" style="width:200px">Fred</div>
+    <div class="d-inline-block" style="width:200px">Rivet</div>
+    <div class="d-inline-block" style="width:200px">Eileen</div>
+
+    <hr>
+
+    <h4 class="text-secondary">d-grid</h4>
+
+    <div class="d-grid gap-1">
+      <div class="bg-warning" style="padding: 10px;">Rex</div>
+      <div class="bg-warning" style="padding: 10px;">Dolores</div>
+      <div class="bg-warning" style="padding: 10px;">Bubbles</div>
+      <div class="bg-warning" style="padding: 10px;">Fred</div>
+      <div class="bg-warning" style="padding: 10px;">Rivet</div>
+      <div class="bg-warning" style="padding: 10px;">Eileen</div>
+    </div>
+
+    <hr>
+
+
+    <h4 class="text-secondary">d-table</h4>
+    <!-- behave like tables -->
+    <div class="d-table">
+      <div class="d-table-row">
+        <div class="d-table-cell bg-info" style="padding: 10px;">Rex</div>
+        <div class="d-table-cell bg-info" style="padding: 10px;">Dolores</div>
+        <div class="d-table-cell bg-info" style="padding: 10px;">Bubbles</div>
+      </div>
+      <div class="d-table-row">
+        <div class="d-table-cell bg-info" style="padding: 10px;">Fred</div>
+        <div class="d-table-cell bg-info" style="padding: 10px;">Rivet</div>
+        <div class="d-table-cell bg-info" style="padding: 10px;">Eileen</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h4 class="text-secondary">d-flex</h4>
+
+    <div class="d-flex">
+      <div style="width:150px">Rex</div>
+      <div style="width:150px">Dolores</div>
+      <div style="width:150px">Bubbles</div>
+    </div>
+    <div class="d-flex">
+      <div style="width:150px">Fred</div>
+      <div style="width:150px">Rivet</div>
+      <div style="width:150px">Eileen</div>
+    </div>
+
+    <hr>
+
+    <h4 class="text-secondary">d-inline-flex</h4>
+
+    <div class="d-inline-flex">
+      <div style="width:150px">Rex</div>
+      <div style="width:150px">Dolores</div>
+      <div style="width:150px">Bubbles</div>
+    </div>
+    <div class="d-inline-flex">
+      <div style="width:150px">Fred</div>
+      <div style="width:150px">Rivet</div>
+      <div style="width:150px">Eileen</div>
+    </div>
+
+    <hr>
+    <br/><br/>
+
+    <h1 class="text-danger">Viewport Breakpoints</h1>
+
+    <h4 class="text-secondary">Show until Viewport</h4>
+
+    <div class="d-grid gap-2">
+      <!-- display:none on certain view -->
+      <span class="d-block d-sm-none bg-primary text-white p-2">Until xs</span>
+      <span class="d-block d-md-none bg-success text-white p-2">Until md</span>
+      <span class="d-block d-lg-none bg-danger text-white p-2">Until lg</span>
+      <span class="d-block d-xl-none bg-warning text-white p-2">Until xl</span>
+      <span class="d-block d-xxl-none bg-info text-white p-2">Until xxl</span>
+    </div>
+
+    <hr>
+    <h4 class="text-secondary">Show after Viewport</h4>
+
+    <div class="d-grid gap-2">
+      <span class="d-none d-sm-block bg-primary text-white p-2">Only after xs</span>
+      <span class="d-none d-md-block bg-success text-white p-2">Only after md</span>
+      <span class="d-none d-lg-block bg-danger text-white p-2">Only after lg</span>
+      <span class="d-none d-xl-block bg-warning text-white p-2">Only after xl</span>
+      <span class="d-none d-xxl-block bg-info text-white p-2">Only after xxl</span>
+    </div>
+
+    <hr>
+
+    <h4 class="text-secondary">Show ONLY in Viewport</h4>
+
+    <div class="d-grid gap-2">
+      <span class="d-block d-sm-none bg-secondary text-white p-2">Only on sm</span>
+      <span class="d-none d-sm-block d-md-none bg-primary text-white p-2">Only on sm</span>
+      <span class="d-none d-md-block d-lg-none bg-success text-white p-2">Only on md</span>
+      <span class="d-none d-lg-block d-xl-none bg-danger text-white p-2">Only on lg</span>
+      <span class="d-none d-xl-block d-xxl-none bg-warning text-white p-2">Only on xl</span>
+      <span class="d-none d-xxl-block bg-info text-white p-2">Only on xxl</span>
+    </div>
+    <br/><br/>
+
+    <h1 class="text-danger">Invisible</h1>
+
+    <div class="d-flex">
+      <div class="bg-secondary text-white p-2">Rex</div>
+      <div class="invisible bg-success text-white p-2">Dolores</div>
+      <div class="bg-secondary text-white p-2">Bubbles</div>
+      <div class="bg-secondary text-white p-2">Fred</div>
+      <div class="bg-secondary text-white p-2">Rivet</div>
+    </div>
+
+    <br/><br/>
+
+    <h1>Viewport Breakpoints</h1>
+
+    <div class="d-grid gap-2">
+      <span class="d-print-none bg-secondary text-white p-2">DON'T PRINT</span>
+      <span class="d-none d-print-block bg-secondary text-white p-2">PRINT AS BLOCK</span>
+      <!-- don't display normally, show if lg and in block mode -->
+      <span class="d-none d-lg-block d-print-block bg-secondary text-white p-2">SHOW LARGE, PRINT BLOCK</span>
+    </div>
+
+    <br/><br/>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+bootstrap (reboot): https://getbootstrap.com/docs/5.1/content/reboot/
+
+  rem = default bootstrap measurement
+
+  bootstrap ignore smaller margins, so avoid margin-top
+
+  box-sizing: border-box .. as default
+
+
+
+spacing
+
+  padding
+    p{dir}-{amt}
+      dir=direction
+        t=top
+        e/r=end/right
+        b=bottom
+        s/l=start/left
+        x = each side horizontally
+        y = each side vertically
+      amt=amount (0-5)
+  margin
+    m{dir}-{amt}
+        dir=direction
+        t=top
+        e/r=end/right
+        b=bottom
+        s/l=start/left
+        x = each side horizontally
+        y = each side vertically
+      amt=amount (0-5, auto)
+  gap (applicable inside d-grid)
+    gap-{amt}
+      amt=amount (0-5)
+
+display
+  d-{val}
+    val=none,inline,inline-block,block,grid,table,table-cell,table-row,flex,inline-flex
+
+display with breakpoint
+  d-{br}-{val}
+    br=breakpoint; none, sm, md, lg, xl, xxl
+
+visiblity
+  visible/invisible.. using "invisible" class.. but will still take up space
+
+contextual printing
+  d-print-{val}
+    val=none,inline.inline-block,block,grid,table,table-cell,table-row,flex,inline-flex
+
+position
+  position-{val}
+    val=static,relative,absolute,fixed,sticky
+
+arrangement
+  {pro}{pos}
+    pro=top,start,bottom,end
+    pos=0,50,100
+    translate-middle
+
+font sizes
+  h1,h2,h3,h4,h5,h6
+  fs-1,fs-2,fs-3,fs-4,fs-5,fs-6
+  display-1,display-2,display-3,display-4,display-5,display-6
+  lead
+
+weight/styles
+  fw-{wgt}.. can override fonts
+    wgt=lighter,light,normal,bold, bolder... normal is a reset class
+
+  fst-{stl}
+    stl=italic,normal
+
+line height = space between text
+  lh-{hgt}
+    hgt=1,sm,base,lg
+
+text alignment
+  text{-br}-{typ}
+    br (optional) = sm,md,lg,xl
+    typ=start,center,end
+
+text decoration
+  text-decoration-{typ}
+    typ=underline,line-through,none
+
+text wrapping/breaking
+  text-{typ}
+    typ=wrap,nowrap,break
+
+text transform
+  text-{typ}
+    typ=lowercase,uppercase,capitalize
+
+vertical alignment (align elements on same line)
+  align-{typ}
+    typ=baseline,top,middle,bottom,text-top,text-bottom
+
+misc
+  rtl = right to left.. need rtl version of bootstrap
+    <html lang="ar" dir="rtl">
+
+  font-monospace = font like typwriter font
+  text-reset = reset text and pick color of parent
