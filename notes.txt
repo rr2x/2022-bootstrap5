@@ -1,0 +1,7 @@
+bootstrap (reboot): https://getbootstrap.com/docs/5.1/content/reboot/
+
+  rem = default bootstrap measurement
+
+  bootstrap ignore smaller margins, so avoid margin-top
+
+  box-sizing: border-box .. as default

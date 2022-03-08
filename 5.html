@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <title>color classes</title>
+  <style>
+    span {
+      border-radius: 5px;
+      padding: 5px;
+    }
+    span.light {
+      color: white;
+    }
+    span.bordered {
+      border: 2px solid rgb(180, 180, 180);
+    }
+
+    .darker {
+      background: rgb(65, 60, 60);
+    }
+  </style>
+</head>
+<body>
+  <main class="container-fluid">
+    <br/>
+    <h1>background colors: bg-{}</h1>
+    <div>
+      <span class="bg-primary light">primary</span>
+      <span class="bg-secondary light">secondary</span>
+      <span class="bg-success light">success</span>
+      <span class="bg-danger light">danger</span>
+      <span class="bg-warning light">warning</span>
+      <span class="bg-info light">info</span>
+      <span class="bg-light">light</span>
+      <span class="bg-dark light">dark</span>
+    </div>
+    <br/>
+    <h1>text colors: text-{}</h1>
+    <div>
+      <span class="text-primary bordered">primary</span>
+      <span class="text-secondary bordered">secondary</span>
+      <span class="text-success bordered">success</span>
+      <span class="text-danger bordered">danger</span>
+      <span class="text-warning bordered">warning</span>
+      <span class="text-info bordered">info</span>
+      <span class="text-light bordered darker">light</span>
+      <span class="text-dark bordered">dark</span>
+    </div>
+    <br/>
+    <h1>link colors: link-{}</h1>
+    <div>
+      <a href="#" class="link-primary">primary</a>
+      <a href="#" class="link-secondary">secondary</a>
+      <a href="#" class="link-success">success</a>
+      <a href="#" class="link-danger">danger</a>
+      <a href="#" class="link-warning">warning</a>
+      <a href="#" class="link-info">info</a>
+      <a href="#" class="link-light darker">light</a>
+      <a href="#" class="link-dark">dark</a>
+    </div>
+    <br/>
+    <h1>Theme color customization</h1>
+    <a href="https://getbootstrap.com/docs/5.0/customize/color/#theme-colors">https://getbootstrap.com/docs/5.0/customize/color/#theme-colors</a>
+    <br/>
+    <br/>
+    <br/>
+    <h1 class="text-primary">The Robot Roundup Vintage Camper Rally Winds Down</h1>
+    <h5 class="bg-success text-light">Over 280 Caravans and Campers Gather and Glamp from All Corners of the Country</h5>
+
+    <p class="text-primary">
+      <!-- color variable names  -->
+      <b style="color: var(--bs-purple)">Q:</b> Why did the robot go camping?<br>
+      <b style="color: var(--bs-orange)">A:</b> He needed to recharge his batteries.
+    </p>
+
+    &raquo; <a href="#" class="link-warning">Read More</a>
+    <br/>
+    <br/>
+    <br/>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
