@@ -103,3 +103,96 @@ misc
 
   font-monospace = font like typwriter font
   text-reset = reset text and pick color of parent
+
+blockquotes
+  blockquote, blockquote-footer, figure
+
+basic lists
+  list-{typ}
+    typ =unstyled,inline,inline-item
+
+list groups
+  list-group, list-group-item
+  modifiers (each pair needs to exist):
+    active aria-current="true"
+    disabled tabindex="-1" aria-disabled="true"
+
+flush list groups (borders are removed)
+  list-group-flush
+
+actionable items (if you want people to click on those group items)
+  list-group-item-action
+
+horizontal list groups
+  list-group-horizontal{-br}
+    br=sm,md,lg,xl,xxl
+
+list group contextual colors (change colors of list groups)
+  list-group-item{-col}
+    col=primary, secondary, success, danger, warning, info, light, dark
+
+table & contextual
+  table
+  table{-typ} (contextual)
+    typ=primary,secondary,success,danger,warning,info,light,dark
+
+table rows & cells
+  table-active
+  table{-typ} (contextual)
+    typ=primary,secondary,success,danger,warning,info,light,dark
+
+table style modifiers
+  table{-typ}
+    typ=striped,hover,sm
+
+table borders
+  table-bordered, table-borderless
+  table{-typ} (contextual)
+    typ=primary,secondary,success,danger,warning,info,light,dark
+
+responsive tables
+  table-responsive{-typ}
+    typ=sm,md,lg,xl,xxl
+
+table vertical alignment
+  align-{typ}
+    typ=baseline,top,middle,bottom,text-top,text-bottom
+
+images
+  img-fluid, img-thumbnail
+
+image floats (not actually used, because of flexbox)
+  float-start, float-end
+  clearfix
+
+image figures
+  figure, figure-img, figure-caption
+
+borders
+  border
+  border{-sid} (additive)
+    sid=top,end,bottom,start
+  border{-sid}-0 (subtractive)
+    sid=top,end,bottom,start
+
+contextual borders
+  border-{col}
+    col=primary,secondary,success,danger,warning,info,light,dark,white
+
+border width
+  border-{unm}
+    num=1,2,3,4,5
+
+border radius
+  rounded{-typ}
+    typ:
+      (side) top,end,bottom,start
+      (shape) circle, pill
+
+border radius sizes
+  rounded-{num}
+    num=0,1,2,3
+
+border shadows
+  shadow{-siz}
+    siz=none,sm,lg
