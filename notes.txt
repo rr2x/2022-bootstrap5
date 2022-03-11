@@ -196,3 +196,78 @@ border radius sizes
 border shadows
   shadow{-siz}
     siz=none,sm,lg
+
+width
+  w-{typ} typ = % based
+    typ=25,50,75,100,auto,mw-100,vw-100
+    mw-100 (maximum width only 100)
+    vw-100 (viewport width 100%)
+
+height
+  h-{typ} typ = % based
+    typ=25,50,75,100,auto,mh-100,vh-100
+    mh-100 (maximum height only 100)
+    vh-100 (viewport height 100%)
+
+aspect ratio (ideal for video embeds)
+  ratio ratio-{val}
+    val=1x1,4x3,16x9,21x9
+
+overflow (what happens if element overflows it's content)
+  overflow-{typ}
+    typ=auto,hidden,visible,scroll
+
+stretched link (make everything clickable within the parent container)
+  stretched-link
+
+user select (applicable on texts)
+  user-select-{typ}
+    typ=auto,all,none
+
+pointer events (can't interact with elements, paired with: aria-disabled="true" tabindex="-1")
+  pe-{typ}
+    typ=none,auto
+
+
+grid system
+  container
+  rows
+  columns
+  flexbox/css grid
+
+container>row>col
+
+row gutters (space between col on each row)
+  g{-dir}-{siz}
+    dir=x,y
+    siz=0,1,2,3,4,5
+
+row columns (useful in making a grid of images)
+  row-cols-{siz}
+    siz=1,2,3,4,5
+
+    example: row-cols-1 = only allow 1 column
+
+columns
+  - align to grid containing 12 col grid
+  - can be used standalone
+  - use on content (content>col)
+
+  column options (for responsiveness)
+    col{-br}-{siz}
+      br=sm,md,lg,xl,xxl
+      siz=1,2,3,4,5,6,7,8,9,10,11,12
+          example: col-sm-2 (take 2 units at sm breakpoint)
+                   col-md-4 (take 4 units at md breakpoint)
+
+reordering columns
+  order{-br}-{ord}
+    br=sm,md,lg,xl,xxl
+    ord=1,2,3,4,5
+
+offsetting columns (so col don't appear where they should normally)
+  offset{-br}-{pos}
+    br=sm,md,lg,xl,xxl
+    pos=1,2,3,4,5,6,7,8,9,10,11
+
+  better to use flexbox in centering things
