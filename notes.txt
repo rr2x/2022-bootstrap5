@@ -277,22 +277,24 @@ flexbox
   d{-br}{-inline}-flex
     br=sm,md,lg,xl,xxl
 
+some flexbox classes can be used on non flexbox parent
+
 flexbox direction
   flex{-br}{-typ}{-reverse}
     br=sm,md,lg,xl,xxl
     typ=row,column
 
-flexbox justify content
+flexbox justify content (for alignment, can be used on non flexbox)
   justify-content{-br}-{typ}
     br=sm,md,lg,xl,xxl
     typ=start,end,center,between,around,evenly
 
-flexbox alignment
+flexbox alignment (for alignment, can be used on non flexbox)
   align-items{-br}-{typ}
     br=sm,md,lg,xl,xxl
     typ=start,end,center,baseline,stretch
 
-flexbox vertical alignment
+flexbox vertical alignment (for alignment, can be used on non flexbox)
   align-items{-br}-{typ}
     br=sm,md,lg,xl,xxl
     typ=start,end,center,baseline,stretch
@@ -348,3 +350,54 @@ button groups
     btn-group-sm, btn-group-lg
   checkboxes/radio (click a button to behave like a checkbox)
     btn-check
+
+nav
+  used with list, nolists or nav tag
+  special assistive tags needed
+  aligns with flexbox
+
+  nav, nav-item, nav-link
+
+nav styles
+  nav-tabs, nav-pills
+
+nav alignment
+  nav-fill, nav-justified
+
+
+navbar
+  nav class="navbar"
+    bg-{col}
+      col=primary,secondary, success,danger,warning,info,light,dark,white
+    navbar-{col}
+      col=light,dark
+    navbar-expand-{br}
+      br=sm,md,lg,xl,xxl
+
+  inside navbar
+    container{-br}
+      br=sm,md,lg,xl,xxl,fluid
+    navbar-nav (where all links go)
+      nav-item, nav-link
+
+  navbar-brand (branding)
+  nav-text (text)
+
+  navbar collapse (hamburger menu)
+    navbar-toggler (wrapper around navbar)
+    navbar-toggler-icon
+    collapse, navbar-collapse, id, navbar-nav-scroll
+
+
+cards
+  card
+    card-header, card-footer, card-body, card-img
+  card-body
+    card-title, card-subtitle, card-text, card-link
+
+card images
+  card-img{-typ}
+    typ=top,bottom,overlay
+
+card layouts
+  card-group
