@@ -103,3 +103,248 @@ misc
 
   font-monospace = font like typwriter font
   text-reset = reset text and pick color of parent
+
+blockquotes
+  blockquote, blockquote-footer, figure
+
+basic lists
+  list-{typ}
+    typ =unstyled,inline,inline-item
+
+list groups
+  list-group, list-group-item
+  modifiers (each pair needs to exist):
+    active aria-current="true"
+    disabled tabindex="-1" aria-disabled="true"
+
+flush list groups (borders are removed)
+  list-group-flush
+
+actionable items (if you want people to click on those group items)
+  list-group-item-action
+
+horizontal list groups
+  list-group-horizontal{-br}
+    br=sm,md,lg,xl,xxl
+
+list group contextual colors (change colors of list groups)
+  list-group-item{-col}
+    col=primary, secondary, success, danger, warning, info, light, dark
+
+table & contextual
+  table
+  table{-typ} (contextual)
+    typ=primary,secondary,success,danger,warning,info,light,dark
+
+table rows & cells
+  table-active
+  table{-typ} (contextual)
+    typ=primary,secondary,success,danger,warning,info,light,dark
+
+table style modifiers
+  table{-typ}
+    typ=striped,hover,sm
+
+table borders
+  table-bordered, table-borderless
+  table{-typ} (contextual)
+    typ=primary,secondary,success,danger,warning,info,light,dark
+
+responsive tables
+  table-responsive{-typ}
+    typ=sm,md,lg,xl,xxl
+
+table vertical alignment
+  align-{typ}
+    typ=baseline,top,middle,bottom,text-top,text-bottom
+
+images
+  img-fluid, img-thumbnail
+
+image floats (not actually used, because of flexbox)
+  float-start, float-end
+  clearfix
+
+image figures
+  figure, figure-img, figure-caption
+
+borders
+  border
+  border{-sid} (additive)
+    sid=top,end,bottom,start
+  border{-sid}-0 (subtractive)
+    sid=top,end,bottom,start
+
+contextual borders
+  border-{col}
+    col=primary,secondary,success,danger,warning,info,light,dark,white
+
+border width
+  border-{unm}
+    num=1,2,3,4,5
+
+border radius
+  rounded{-typ}
+    typ:
+      (side) top,end,bottom,start
+      (shape) circle, pill
+
+border radius sizes
+  rounded-{num}
+    num=0,1,2,3
+
+border shadows
+  shadow{-siz}
+    siz=none,sm,lg
+
+width
+  w-{typ} typ = % based
+    typ=25,50,75,100,auto,mw-100,vw-100
+    mw-100 (maximum width only 100)
+    vw-100 (viewport width 100%)
+
+height
+  h-{typ} typ = % based
+    typ=25,50,75,100,auto,mh-100,vh-100
+    mh-100 (maximum height only 100)
+    vh-100 (viewport height 100%)
+
+aspect ratio (ideal for video embeds)
+  ratio ratio-{val}
+    val=1x1,4x3,16x9,21x9
+
+overflow (what happens if element overflows it's content)
+  overflow-{typ}
+    typ=auto,hidden,visible,scroll
+
+stretched link (make everything clickable within the parent container)
+  stretched-link
+
+user select (applicable on texts)
+  user-select-{typ}
+    typ=auto,all,none
+
+pointer events (can't interact with elements, paired with: aria-disabled="true" tabindex="-1")
+  pe-{typ}
+    typ=none,auto
+
+
+grid system
+  container
+  rows
+  columns
+  flexbox/css grid
+
+container>row>col
+
+row gutters (space between col on each row)
+  g{-dir}-{siz}
+    dir=x,y
+    siz=0,1,2,3,4,5
+
+row columns (useful in making a grid of images)
+  row-cols-{siz}
+    siz=1,2,3,4,5
+
+    example: row-cols-1 = only allow 1 column
+
+columns
+  - align to grid containing 12 col grid
+  - can be used standalone
+  - use on content (content>col)
+
+  column options (for responsiveness)
+    col{-br}-{siz}
+      br=sm,md,lg,xl,xxl
+      siz=1,2,3,4,5,6,7,8,9,10,11,12
+          example: col-sm-2 (take 2 units at sm breakpoint)
+                   col-md-4 (take 4 units at md breakpoint)
+
+reordering columns
+  order{-br}-{ord}
+    br=sm,md,lg,xl,xxl
+    ord=1,2,3,4,5
+
+offsetting columns (so col don't appear where they should normally)
+  offset{-br}-{pos}
+    br=sm,md,lg,xl,xxl
+    pos=1,2,3,4,5,6,7,8,9,10,11
+
+  better to use flexbox in centering things
+
+
+flexbox
+  d{-br}{-inline}-flex
+    br=sm,md,lg,xl,xxl
+
+flexbox direction
+  flex{-br}{-typ}{-reverse}
+    br=sm,md,lg,xl,xxl
+    typ=row,column
+
+flexbox justify content
+  justify-content{-br}-{typ}
+    br=sm,md,lg,xl,xxl
+    typ=start,end,center,between,around,evenly
+
+flexbox alignment
+  align-items{-br}-{typ}
+    br=sm,md,lg,xl,xxl
+    typ=start,end,center,baseline,stretch
+
+flexbox vertical alignment
+  align-items{-br}-{typ}
+    br=sm,md,lg,xl,xxl
+    typ=start,end,center,baseline,stretch
+
+flexbox align self (align individual items inside flex container)
+  align-self{-br}-{typ}
+    br=sm,md,lg,xl,xxl
+    typ=start,end,center,baseline,stretch
+
+flexbox flex fill (fill available horizontal space)
+  flex{-br}-fill
+    br=sm,md,lg,xl,xxl
+
+flexbox flex grow/shrink (similar to flex fill, but ability to toggle)
+  flex{-br}{-typ}{-bool}
+    br=sm,md,lg,xl,xxl
+    typ=grow,shrink
+    bool=0,1
+
+flexbox flex wrap
+  flex{-br}{-typ}{-reverse}
+    br=sm,md,lg,xl,xxl
+    typ=wrap,nowrap
+
+flexbox order
+  order{-br}{-amt}
+    br=sm,md,lg,xl,xxl
+    amt=first,0,1,2,3,4,5,last
+
+flexbox align content (vertically)
+  align-content{-br}{-typ}
+    br=sm,md,lg,xl,xxl
+    typ=start,end,center,between,around,stretch
+
+
+buttons
+  'btn' basic class
+  can be applied to: <button> <a> <input>
+  role="button" on <a> (for assistive devices)
+  type="button" on <input> or <button>
+
+contextual buttons
+  btn{-outline}{-typ}
+  typ=primary,secondary,success,danger,warning,info,light,dark,link
+
+button sizes
+  btn-sm, btn-lg
+
+button groups
+  default
+    btn-group, btn-group-vertical
+  variation
+    btn-group-sm, btn-group-lg
+  checkboxes/radio (click a button to behave like a checkbox)
+    btn-check
