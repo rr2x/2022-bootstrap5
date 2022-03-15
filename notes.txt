@@ -497,3 +497,50 @@ modal options
     siz=sm,md,lg,xl,xxl
   data-bs-{typ}
     typ=backdrop(bool|static), keyboard(bool), focus(bool)
+
+collapse
+  collapse multi-collapse
+  data-bs-toggle="collapse"
+  href or data-bs-target
+
+dropdown
+  dropdown
+  dropdown-toggle
+  dropdown-menu
+  dropdown-item
+
+dropdown group
+  btn-group
+  dropdown-toggle-split
+
+dropdown options
+  dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end
+  dropend
+  dropstart
+  dropup
+  dropdown-menu-dark
+
+dropdown content
+  dropdown-header, dropdown-divider, dropdown-item-text
+
+tooltip data
+  button or a
+  title="Tooltip Text"
+  data-bs-toggle="tooltip"
+  data-bs-placement="{SID}"
+    SID=top,right,bottom,left
+
+popover data
+  button or a
+  title="Popover Headline"
+  data-bs-content="Popover Copy"
+  data-bs-toggle="popover"
+  data-bs-placement="{SID}"
+    SID=top,right,bottom,left
+
+scrollspy data
+  nav
+  data-bs-spy="scroll"
+  data-bs-spy="ID" = what item you want to keep track on
+  data-bs-offset="AMT"
+  position-relative = element to track of requires this
