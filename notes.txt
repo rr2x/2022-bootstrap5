@@ -401,3 +401,58 @@ card images
 
 card layouts
   card-group
+
+pagination
+  nav>ul.pagination>li.page-item>a.page-link
+  pagination
+  pagination-{siz}
+    siz=sm,lg
+  page-{typ}
+    typ=item,link
+
+progress bar
+  progress
+  progress-bar{-typ}
+  typ=striped,animated
+
+spinner
+  spinner-border, spinner-grow
+
+badges
+  badge
+  rounded-pill
+
+breadcrumb
+  breadcrumb
+  breadcrumb-item
+  --bs-breadcrumb-divider
+
+carousel
+  carousel
+    data-bs-ride, slide, carousel-fade
+  carousel-inner
+    carousel-item
+  class="d-block w-100" active (required so images work properly)
+
+carousel button controls
+  carousel-control-{typ}
+    typ=prev,next
+    data-bs-target="id", data-bs-slide="{prev|next}"
+
+carousel indicator controls
+  carousel-indicators
+  options: data-bs-target="id, data-bs-slide-to="#", aria-label="Label"
+  current: class="active" aria-current="true"
+
+carousel options
+  carousel-caption
+  carousel-dark
+
+carousel interactivity
+  data-bs-{typ}
+    typ=ride (bool = activate when interacted | carousel = autoplay)
+        interval (ms = default 5000, 5sec | fade)
+        pause (hover) = stop cycling when someone is hovering
+        wrap (go to first image after last)
+        keyboard (allow keyboard control)
+        touch (touch events)
