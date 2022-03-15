@@ -456,3 +456,44 @@ carousel interactivity
         wrap (go to first image after last)
         keyboard (allow keyboard control)
         touch (touch events)
+
+accordion
+  accordion
+  accordion-item
+  accordion-header (ID)
+  accordion-button
+  accordion-body
+  accordion-collapse (ID)
+  accordion-flush = gets rid of borders
+
+alert
+  alert
+  alert-{typ}
+    typ=primary,secondary,success,danger,warning,info,light,dark
+  alert options:
+    alert-heading,alert-link,alert-dismissible,fade,show,btn-close
+
+toast
+  toast
+  toast-container
+  toast-header, toast-body
+
+toast options
+  show or hide: show,hide
+  close: btn-close
+  data: data-bs-animation,data-bs-autohide,data-bs-delay
+
+modal
+  modal, fade
+  modal-dialog, modal-content
+  modal-header, modal-body, modal-footer
+
+modal options
+  modal-dialog{-typ}
+    typ=centered,scrollable
+  modal{-siz}
+    siz=sm,lg,xl
+  modal-fullscreen{-siz}{-down} = breakpoint before modal goes fullscreen
+    siz=sm,md,lg,xl,xxl
+  data-bs-{typ}
+    typ=backdrop(bool|static), keyboard(bool), focus(bool)
