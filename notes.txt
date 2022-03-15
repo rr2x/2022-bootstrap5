@@ -277,22 +277,24 @@ flexbox
   d{-br}{-inline}-flex
     br=sm,md,lg,xl,xxl
 
+some flexbox classes can be used on non flexbox parent
+
 flexbox direction
   flex{-br}{-typ}{-reverse}
     br=sm,md,lg,xl,xxl
     typ=row,column
 
-flexbox justify content
+flexbox justify content (for alignment, can be used on non flexbox)
   justify-content{-br}-{typ}
     br=sm,md,lg,xl,xxl
     typ=start,end,center,between,around,evenly
 
-flexbox alignment
+flexbox alignment (for alignment, can be used on non flexbox)
   align-items{-br}-{typ}
     br=sm,md,lg,xl,xxl
     typ=start,end,center,baseline,stretch
 
-flexbox vertical alignment
+flexbox vertical alignment (for alignment, can be used on non flexbox)
   align-items{-br}-{typ}
     br=sm,md,lg,xl,xxl
     typ=start,end,center,baseline,stretch
@@ -348,3 +350,197 @@ button groups
     btn-group-sm, btn-group-lg
   checkboxes/radio (click a button to behave like a checkbox)
     btn-check
+
+nav
+  used with list, nolists or nav tag
+  special assistive tags needed
+  aligns with flexbox
+
+  nav, nav-item, nav-link
+
+nav styles
+  nav-tabs, nav-pills
+
+nav alignment
+  nav-fill, nav-justified
+
+
+navbar
+  nav class="navbar"
+    bg-{col}
+      col=primary,secondary, success,danger,warning,info,light,dark,white
+    navbar-{col}
+      col=light,dark
+    navbar-expand-{br}
+      br=sm,md,lg,xl,xxl
+
+  inside navbar
+    container{-br}
+      br=sm,md,lg,xl,xxl,fluid
+    navbar-nav (where all links go)
+      nav-item, nav-link
+
+  navbar-brand (branding)
+  nav-text (text)
+
+  navbar collapse (hamburger menu)
+    navbar-toggler (wrapper around navbar)
+    navbar-toggler-icon
+    collapse, navbar-collapse, id, navbar-nav-scroll
+
+
+cards
+  card
+    card-header, card-footer, card-body, card-img
+  card-body
+    card-title, card-subtitle, card-text, card-link
+
+card images
+  card-img{-typ}
+    typ=top,bottom,overlay
+
+card layouts
+  card-group
+
+pagination
+  nav>ul.pagination>li.page-item>a.page-link
+  pagination
+  pagination-{siz}
+    siz=sm,lg
+  page-{typ}
+    typ=item,link
+
+progress bar
+  progress
+  progress-bar{-typ}
+  typ=striped,animated
+
+spinner
+  spinner-border, spinner-grow
+
+badges
+  badge
+  rounded-pill
+
+breadcrumb
+  breadcrumb
+  breadcrumb-item
+  --bs-breadcrumb-divider
+
+carousel
+  carousel
+    data-bs-ride, slide, carousel-fade
+  carousel-inner
+    carousel-item
+  class="d-block w-100" active (required so images work properly)
+
+carousel button controls
+  carousel-control-{typ}
+    typ=prev,next
+    data-bs-target="id", data-bs-slide="{prev|next}"
+
+carousel indicator controls
+  carousel-indicators
+  options: data-bs-target="id, data-bs-slide-to="#", aria-label="Label"
+  current: class="active" aria-current="true"
+
+carousel options
+  carousel-caption
+  carousel-dark
+
+carousel interactivity
+  data-bs-{typ}
+    typ=ride (bool = activate when interacted | carousel = autoplay)
+        interval (ms = default 5000, 5sec | fade)
+        pause (hover) = stop cycling when someone is hovering
+        wrap (go to first image after last)
+        keyboard (allow keyboard control)
+        touch (touch events)
+
+accordion
+  accordion
+  accordion-item
+  accordion-header (ID)
+  accordion-button
+  accordion-body
+  accordion-collapse (ID)
+  accordion-flush = gets rid of borders
+
+alert
+  alert
+  alert-{typ}
+    typ=primary,secondary,success,danger,warning,info,light,dark
+  alert options:
+    alert-heading,alert-link,alert-dismissible,fade,show,btn-close
+
+toast
+  toast
+  toast-container
+  toast-header, toast-body
+
+toast options
+  show or hide: show,hide
+  close: btn-close
+  data: data-bs-animation,data-bs-autohide,data-bs-delay
+
+modal
+  modal, fade
+  modal-dialog, modal-content
+  modal-header, modal-body, modal-footer
+
+modal options
+  modal-dialog{-typ}
+    typ=centered,scrollable
+  modal{-siz}
+    siz=sm,lg,xl
+  modal-fullscreen{-siz}{-down} = breakpoint before modal goes fullscreen
+    siz=sm,md,lg,xl,xxl
+  data-bs-{typ}
+    typ=backdrop(bool|static), keyboard(bool), focus(bool)
+
+collapse
+  collapse multi-collapse
+  data-bs-toggle="collapse"
+  href or data-bs-target
+
+dropdown
+  dropdown
+  dropdown-toggle
+  dropdown-menu
+  dropdown-item
+
+dropdown group
+  btn-group
+  dropdown-toggle-split
+
+dropdown options
+  dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end
+  dropend
+  dropstart
+  dropup
+  dropdown-menu-dark
+
+dropdown content
+  dropdown-header, dropdown-divider, dropdown-item-text
+
+tooltip data
+  button or a
+  title="Tooltip Text"
+  data-bs-toggle="tooltip"
+  data-bs-placement="{SID}"
+    SID=top,right,bottom,left
+
+popover data
+  button or a
+  title="Popover Headline"
+  data-bs-content="Popover Copy"
+  data-bs-toggle="popover"
+  data-bs-placement="{SID}"
+    SID=top,right,bottom,left
+
+scrollspy data
+  nav
+  data-bs-spy="scroll"
+  data-bs-spy="ID" = what item you want to keep track on
+  data-bs-offset="AMT"
+  position-relative = element to track of requires this
