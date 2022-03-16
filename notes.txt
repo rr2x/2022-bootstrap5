@@ -544,3 +544,34 @@ scrollspy data
   data-bs-spy="ID" = what item you want to keep track on
   data-bs-offset="AMT"
   position-relative = element to track of requires this
+
+forms
+  form-label
+  form-control
+  form-text
+
+forms select
+  form-select{-siz}
+    siz=sm,lg
+
+forms raneg
+  form-range
+
+floating labels
+  form-floating
+
+checkbox, radio, switches
+  form-check-{opt}
+    opt=label,input,inline
+  form-switch
+  btn-check
+
+input group
+  input-group{-siz}
+    siz=sm,lg
+  input-group-text
+
+validation
+  needs-validation novalidate (just like preventDefault())
+  valid-feedback, invalid-feedback
+  is-invalid, is-valid
